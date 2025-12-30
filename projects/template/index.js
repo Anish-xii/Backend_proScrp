@@ -1,20 +1,13 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
-import adminRoutes from './routes/admin.routes.js';
-import publicRoutes from './routes/public.routes.js';
-
-dotenv.config();
 
 connectDB();
 
+dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 const app = express();
-app.use(express.json());
-
-app.use('/api', publicRoutes);         // e.g., GET /api/posts
-app.use('/api/admin', adminRoutes);   // e.g., POST /api/admin/posts
 
 app.get('/', (req, res) => {
   res.send('Welcome to the Project Blog!');

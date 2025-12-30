@@ -4,25 +4,34 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./projects/project-blog/index.js",
+    "seed": "node ./projects/project-blog/seed.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+  "type": "module",
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
     "connect-mongo": "^6.0.0",
     "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
     "express": "^5.2.1",
     "express-session": "^1.18.2",
     "express-validator": "^7.3.1",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.0.2",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "globals": "^16.5.0",
     "nodemon": "^3.1.11"
   }
 }
